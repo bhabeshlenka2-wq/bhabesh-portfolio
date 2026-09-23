@@ -1,19 +1,18 @@
-# Bhabesh Kumar Lenka — Personal Portfolio
+# Bhabesh Kumar Lenka — Engineering Portfolio
 
-A modern animated personal portfolio website built with HTML, CSS and JavaScript.
+A professional static portfolio for GitHub Pages or Vercel.
 
-## Files
-- `index.html` — website content
-- `style.css` — design and responsive layout
-- `script.js` — animations, scroll progress and mobile menu
-- `images/` — add your photos/project images here
-- `resume.pdf` — add your PDF resume here
+## Current profile details
+- Diploma in Electrical Engineering — Completed
+- CGPA: 8.7/10
+- Selected for IOCL Training Programme
+- Selected for AAI Bengaluru Training Programme
+- Focus: Electrical Engineering, IoT, embedded systems, sensors, assistive technology and prototyping
 
-## Before publishing
-1. Replace `your-email@example.com` in `index.html` with your email.
-2. Replace the LinkedIn and GitHub links with your real profiles.
-3. Add your profile photo as `images/profile.jpg` and update the portrait section if desired.
-4. Add your `resume.pdf`.
+## Add your files
+1. Put your final résumé in the project root as `resume.pdf`.
+2. Add your photographs/project images inside `images/`.
+3. Replace the placeholder email, LinkedIn and GitHub links in `index.html` with your real links.
 
 ## Deploy
-Upload this folder to a GitHub repository, then import that repository into Vercel.
+Upload the project files to GitHub and import the repository into Vercel. No build command is required because this is a static HTML/CSS/JavaScript site.
