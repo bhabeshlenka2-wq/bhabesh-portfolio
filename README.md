@@ -10,7 +10,7 @@ A professional static portfolio for GitHub Pages or Vercel.
 - Focus: Electrical Engineering, IoT, embedded systems, sensors, assistive technology and prototyping
 
 ## Add your files
-1. Put your final résumé in the project root as `resume.pdf`.
+1. Put your final resume in the project root as `resume.pdf`.
 2. Add your photographs/project images inside `images/`.
 3. Replace the placeholder email, LinkedIn and GitHub links in `index.html` with your real links.
 
