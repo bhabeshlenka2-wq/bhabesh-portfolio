@@ -11,38 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">.loader {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  background: var(--bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition:
-    opacity .35s ease,
-    visibility .35s ease,
-    transform .5s cubic-bezier(.76, 0, .24, 1);
-}
-
-.loader.hidden {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-100%);
-}
-
-.loader-inner {
-  text-align: center;
-  transition:
-    transform .3s cubic-bezier(.76, 0, .24, 1),
-    opacity .2s ease;
-}
-
-.loader.hidden .loader-inner {
-  transform: translateY(-30px);
-  opacity: 0;
-}
-3. Delete the extra transition block
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">.
   <style>
 
     :root {
