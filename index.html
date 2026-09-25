@@ -1548,6 +1548,232 @@
       }
     }
 
+  
+    /* =========================
+       PREMIUM ANIMATION PACK
+    ========================= */
+
+    .highlight {
+      transition: text-shadow .3s ease, color .3s ease;
+    }
+
+    .highlight:hover {
+      text-shadow: 0 0 18px rgba(255,255,255,.35);
+    }
+
+    .hero-content {
+      animation: heroFloat 7s ease-in-out infinite;
+      will-change: transform;
+    }
+
+    @keyframes heroFloat {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    .hero-title {
+      background-size: 200% auto;
+      animation: titleShimmer 5s linear infinite;
+    }
+
+    @keyframes titleShimmer {
+      0% { background-position: 200% center; }
+      100% { background-position: -200% center; }
+    }
+
+    section h2,
+    .section-title {
+      position: relative;
+    }
+
+    section h2::after,
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      margin-top: 10px;
+      border-radius: 10px;
+      background: currentColor;
+      opacity: .65;
+      transition: width .8s cubic-bezier(.22,1,.36,1);
+    }
+
+    section.active h2::after,
+    section.active .section-title::after {
+      width: 55px;
+    }
+
+    .section-label {
+      transition: letter-spacing .4s ease, transform .4s ease;
+    }
+
+    .section-label:hover {
+      letter-spacing: .14em;
+      transform: translateX(4px);
+    }
+
+    .info-card,
+    .experience-card,
+    .education-card,
+    .contact-box {
+      transform-style: preserve-3d;
+      transition: transform .35s cubic-bezier(.22,1,.36,1),
+                  box-shadow .35s ease,
+                  border-color .35s ease;
+      will-change: transform;
+    }
+
+    .info-card:hover,
+    .experience-card:hover,
+    .education-card:hover,
+    .contact-box:hover {
+      transform: translateY(-7px);
+    }
+
+    .achievement-card,
+    .project-card {
+      opacity: 0;
+      transform: translateY(28px) scale(.98);
+      animation: cardReveal .75s cubic-bezier(.22,1,.36,1) forwards;
+    }
+
+    .achievement-card:nth-child(1), .project-card:nth-child(1) { animation-delay: .05s; }
+    .achievement-card:nth-child(2), .project-card:nth-child(2) { animation-delay: .12s; }
+    .achievement-card:nth-child(3), .project-card:nth-child(3) { animation-delay: .19s; }
+    .achievement-card:nth-child(4), .project-card:nth-child(4) { animation-delay: .26s; }
+    .achievement-card:nth-child(5), .project-card:nth-child(5) { animation-delay: .33s; }
+    .achievement-card:nth-child(6), .project-card:nth-child(6) { animation-delay: .40s; }
+
+    @keyframes cardReveal {
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .project-card .project-number {
+      transition: transform .35s ease, opacity .35s ease;
+    }
+
+    .project-card:hover .project-number {
+      transform: scale(1.08);
+      opacity: .9;
+    }
+
+    .project-tag {
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .project-card:hover .project-tag {
+      transform: translateY(-2px);
+    }
+
+    .skill-item {
+      transition: transform .3s cubic-bezier(.22,1,.36,1),
+                  box-shadow .3s ease;
+    }
+
+    .skill-item:hover {
+      transform: translateY(-4px);
+    }
+
+    nav a {
+      transition: color .25s ease, text-shadow .25s ease, transform .25s ease;
+    }
+
+    nav a:hover {
+      transform: translateY(-2px);
+    }
+
+    nav a.active {
+      text-shadow: 0 0 14px currentColor;
+    }
+
+    .social-links a {
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .social-links a:hover {
+      transform: translateY(-5px) rotate(-2deg);
+    }
+
+    .magnetic-btn,
+    button,
+    .btn {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ripple {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%) scale(0);
+      background: rgba(255,255,255,.28);
+      animation: buttonRipple .65s ease-out forwards;
+    }
+
+    @keyframes buttonRipple {
+      to {
+        transform: translate(-50%, -50%) scale(18);
+        opacity: 0;
+      }
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      pointer-events: none;
+      animation: orbitPulse 6s ease-in-out infinite;
+    }
+
+    @keyframes orbitPulse {
+      0%,100% { opacity: .25; scale: .96; }
+      50% { opacity: .55; scale: 1.02; }
+    }
+
+    footer {
+      opacity: 0;
+      transform: translateY(15px);
+      animation: footerReveal .9s .2s ease forwards;
+    }
+
+    @keyframes footerReveal {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .page-loaded .hero-content {
+      animation-play-state: running;
+    }
+
+    @media (max-width: 700px) {
+      .hero::before { width: 260px; height: 260px; }
+      .hero-content { animation: none; }
+      .achievement-card,
+      .project-card { animation-delay: .05s; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-content,
+      .hero-title,
+      .hero::before,
+      footer,
+      .achievement-card,
+      .project-card {
+        animation: none !important;
+      }
+    }
+
   </style>
 </head>
 
@@ -2821,6 +3047,115 @@
 
       }
     );
+
+  
+    /* =========================
+       PREMIUM INTERACTION PACK
+    ========================= */
+
+    /* BUTTON RIPPLE */
+    document.querySelectorAll("button, .btn, .magnetic-btn").forEach((button) => {
+      button.addEventListener("click", (event) => {
+        const rect = button.getBoundingClientRect();
+        const ripple = document.createElement("span");
+        ripple.className = "ripple";
+        ripple.style.left = `${event.clientX - rect.left}px`;
+        ripple.style.top = `${event.clientY - rect.top}px`;
+        button.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 700);
+      });
+    });
+
+    /* CARD 3D PARALLAX */
+    document.querySelectorAll(
+      ".info-card, .experience-card, .education-card, .contact-box"
+    ).forEach((card) => {
+      card.addEventListener("pointermove", (event) => {
+        if (window.innerWidth < 700) return;
+        const rect = card.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width - .5;
+        const y = (event.clientY - rect.top) / rect.height - .5;
+        card.style.transform =
+          `perspective(900px) rotateX(${(-y * 3).toFixed(2)}deg) rotateY(${(x * 3).toFixed(2)}deg) translateY(-7px)`;
+      });
+
+      card.addEventListener("pointerleave", () => {
+        card.style.transform = "";
+      });
+    });
+
+    /* HERO MOUSE PARALLAX */
+    const hero = document.querySelector(".hero");
+    const heroContent = document.querySelector(".hero-content");
+
+    if (hero && heroContent && window.innerWidth > 700) {
+      hero.addEventListener("pointermove", (event) => {
+        const rect = hero.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width - .5;
+        const y = (event.clientY - rect.top) / rect.height - .5;
+        heroContent.style.transform =
+          `translate3d(${x * 8}px, ${y * 8}px, 0)`;
+      });
+
+      hero.addEventListener("pointerleave", () => {
+        heroContent.style.transform = "";
+      });
+    }
+
+    /* SCROLL VELOCITY */
+    let lastScrollY = window.scrollY;
+    let scrollTicking = false;
+
+    window.addEventListener("scroll", () => {
+      if (scrollTicking) return;
+      scrollTicking = true;
+
+      requestAnimationFrame(() => {
+        const velocity = Math.min(
+          Math.abs(window.scrollY - lastScrollY),
+          30
+        );
+        document.documentElement.style.setProperty(
+          "--scroll-velocity",
+          velocity
+        );
+        lastScrollY = window.scrollY;
+        scrollTicking = false;
+      });
+    }, { passive: true });
+
+    /* DYNAMIC BACKGROUND PARTICLES */
+    if (particlesContainer) {
+      for (let i = 0; i < 12; i++) {
+        const particle = document.createElement("span");
+        particle.className = "dynamic-particle";
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.top = `${Math.random() * 100}%`;
+        particle.style.animationDelay = `${Math.random() * 5}s`;
+        particlesContainer.appendChild(particle);
+      }
+    }
+
+    /* CARD POINTER GLOW VARIABLES */
+    document.querySelectorAll(
+      ".project-card, .achievement-card, .skill-item"
+    ).forEach((card) => {
+      card.addEventListener("pointermove", (event) => {
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty(
+          "--pointer-x",
+          `${event.clientX - rect.left}px`
+        );
+        card.style.setProperty(
+          "--pointer-y",
+          `${event.clientY - rect.top}px`
+        );
+      });
+    });
+
+    window.addEventListener("load", () => {
+      document.body.classList.add("page-loaded");
+    });
 
   </script>
 
