@@ -24,3 +24,7 @@ header{height:90px;max-width:1200px;margin:auto;padding:0 45px;display:flex;alig
 @keyframes loaderOut{to{opacity:0;visibility:hidden;transform:scale(1.04)}}@keyframes loaderBar{to{transform:scaleX(0)}}@keyframes loaderPulse{from{transform:scale(.92);opacity:.65}to{transform:scale(1.06);opacity:1}}@keyframes heroTitle{from{opacity:0;transform:translateY(28px) scale(.985);filter:blur(7px)}to{opacity:1;transform:none;filter:blur(0)}}@keyframes orbit{to{transform:rotate(360deg)}}
 @media(max-width:800px){.hero:after{display:none}.social-link{width:50px;height:50px}}
 @media(prefers-reduced-motion:reduce){.page-loader{display:none}.hero{transform:none}.hero:after{display:none}}
+.highlight {
+  color: #29b6ff;
+  font-weight: 600;
+}
